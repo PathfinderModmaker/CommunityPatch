@@ -53,25 +53,23 @@ namespace CommunityPatch
                 throw ex;
             }
 
-            if (!Main.ApplyPatch(typeof(LeaderState_Leader_GetPortrait_Patch), "Kingdom Management Custom Portrait Fix"))
+
+            if (!Main.ApplyPatch(typeof(LeaderState_Leader_GetPortrait_Patch), "Quarter Sized Fullength Custom Portraits on Kingdom Management Screen Fix"))
             {
                 DebugLog("Failed to patch LeaderState_Leader_GetPortrait");
             }
-            if (!Main.ApplyPatch(typeof(DialogController_HandleOnCueShow_Patch), "Dialog Listener OnSpeakerNameChange Fix"))
+            if (!Main.ApplyPatch(typeof(DialogController_HandleOnCueShow_Patch), "Not Updating Dialog Listener Name at OnSpeakerNameChange Fix"))
             {
-
                 DebugLog("Failed to patch DialogController_HandleOnCueShow");
             }
-            if (!Main.ApplyPatch(typeof(DialogController_HandleOnCueShow_Prefix_Patch), "Dialog Listener Default Companion CustomPortrait Fix"))
+            if (!Main.ApplyPatch(typeof(DialogController_HandleOnCueShow_Prefix_Patch), "Missing Custom Portrait when Dialog Listener is Default Companion Fix"))
             {
-
                 DebugLog("Failed to patch DialogController_HandleOnCueShow_Prefix");
             }
-            if (!Main.ApplyPatch(typeof(CommunityPatch.Examples.LibraryScriptableObject_LoadDictionary_Patch), "Run once startup hook for Startup AssetLoader Example1 "))
+        /*    if (!Main.ApplyPatch(typeof(CommunityPatch.Examples.LibraryScriptableObject_LoadDictionary_Patch), "Run once startup hook for Startup AssetLoader Example1 "))
             {
-
                 DebugLog("Failed to patch LibraryScriptableObject_LoadDictionary");
-            }
+            }*/
 
             
             return true;
@@ -193,6 +191,7 @@ namespace CommunityPatch
         private static bool OnToggle(UnityModManager.ModEntry modEntry, bool value)
         {
             Main.modEnabled = value;
+            if(Main.modEnabled) Main.settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
             return true;
         }
         private static void OnSaveGUI(UnityModManager.ModEntry modEntry)

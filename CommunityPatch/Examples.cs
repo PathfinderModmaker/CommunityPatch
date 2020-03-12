@@ -17,7 +17,7 @@ namespace CommunityPatch
         public static void Init()
         {
 
-            Main.DebugLog("Init()");
+            //Main.DebugLog("Init()");
 
         }
         // Token: 0x02000015 RID: 21
