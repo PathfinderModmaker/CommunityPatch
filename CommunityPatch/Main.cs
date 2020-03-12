@@ -44,7 +44,7 @@ namespace CommunityPatch
 
                 Main.harmonyInstance = HarmonyInstance.Create(modEntry.Info.Id);
                 modEntry.OnUnload = new Func<UnityModManager.ModEntry, bool>(Main.Unload);
-                //   var harmony = Harmony12.HarmonyInstance.Create(modEntry.Info.Id);
+                //    var harmony = Harmony12.HarmonyInstance.Create(modEntry.Info.Id);
                 //    harmony.PatchAll(Assembly.GetExecutingAssembly());
             }
             catch (Exception ex)
