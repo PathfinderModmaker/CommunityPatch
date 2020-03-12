@@ -93,7 +93,7 @@
   <ItemGroup>
     <Compile Include="DialogListenerDefaultCompanionCustomPortraitFix.cs" />
     <Compile Include="DialogListenerOnSpeakerNameChangeFix.cs" />
-    <Compile Include="Examples.cs" />
+    <Compile Include="CommonModmakingGotchas.cs" />
     <Compile Include="KingdomManagementCustomPortraitFix.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

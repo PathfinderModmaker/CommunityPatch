@@ -35,8 +35,8 @@ namespace CommunityPatch
                 Main.modEnabled = modEntry.Active;
                 Main.settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
 
-                Examples.isAssetLoaderRunning = true;
-                modEntry.OnUpdate = new Action<UnityModManager.ModEntry, float>(Examples.AssetLoader_Compatibility);
+                CommonModmakingGotchas.isAssetLoaderRunning = true;
+                modEntry.OnUpdate = new Action<UnityModManager.ModEntry, float>(CommonModmakingGotchas.AssetLoader_Compatibility);
                 
                 modEntry.OnToggle = new Func<UnityModManager.ModEntry, bool, bool>(Main.OnToggle);
                 modEntry.OnGUI = new Action<UnityModManager.ModEntry>(Main.OnGUI);
