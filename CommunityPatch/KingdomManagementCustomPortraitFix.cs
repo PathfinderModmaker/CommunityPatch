@@ -35,11 +35,7 @@ namespace CommunityPatch
             {
 
 
-               Sprite fullLengthImage = (Sprite)typeof(PortraitData).GetField("m_FullLengthImage", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__result);
-
-
-
-                Sprite sprite = Sprite.Create(fullLengthImage.texture, fullLengthImage.textureRect, new Vector2((float)0.5, (float)0.5), 100);
+                Sprite sprite = Sprite.Create(__result.FullLengthPortrait.texture, __result.FullLengthPortrait.textureRect, new Vector2((float)0.5, (float)0.5), 100);
 
                 sprite.name = "resized";
 
