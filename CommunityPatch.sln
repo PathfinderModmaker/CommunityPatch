@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NpcHQTextures", "CommunityPatch\NpcHQTextures.csproj", "{F42A1F86-C880-4A9F-8BC5-703C1694C573}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityPatch", "CommunityPatch\CommunityPatch.csproj", "{F42A1F86-C880-4A9F-8BC5-703C1694C573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
